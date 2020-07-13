@@ -1,6 +1,6 @@
 {
   "name": "@witty-services/ts-mapperize",
-  "version": "1.0.0-rc.1",
+  "version": "0.0.0-rc.1",
   "description": "Typescript mapping library",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -22,8 +22,7 @@
   "license": "MIT",
   "peerDependencies": {
     "typescript": "^3.4.3",
-    "lodash": "^4.17.15",
-    "reflect-metadata": "^0.1.13"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
@@ -32,7 +31,6 @@
     "coveralls": "^3.0.9",
     "jest": "^24.9.0",
     "lodash": "^4.17.15",
-    "reflect-metadata": "^0.1.13",
     "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
     "typescript": "^3.4.3"
