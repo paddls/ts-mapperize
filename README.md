@@ -126,7 +126,7 @@ params | MapperParamContext<any, any>[] | false | list of mapping information fo
 
 ## How to run Unit Tests
 
-To run unit tests and generate coverage, run :
+To run unit tests and generate coverage with Jest, run :
 
 ```
 npm run test
