@@ -18,7 +18,7 @@ describe('MapperDecorator', () => {
       @Mapper(() => B, [
         {target: 'b', source: 'a'}
       ])
-      public mapTo: MapperFn<A, B>
+      public mapTo: MapperFn<A, B>;
     }
 
     const mapper: Mapping = new Mapping();

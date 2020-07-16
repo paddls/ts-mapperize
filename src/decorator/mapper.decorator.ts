@@ -7,11 +7,9 @@ export function Mapper<I, O>(type: (() => new(...args: any[]) => O), params: Map
   return (target: any, propertyKey: string) => {
     Object.defineProperty(target.constructor.prototype, propertyKey, {
       get(): MapperFn<any, any> {
-        const transform: MapperFn<any, any> = function (input: any): any {
+        return (input: any) => {
           return apply(type, input, params);
-        }
-
-        return transform;
+        };
       },
       enumerable: true,
       configurable: true

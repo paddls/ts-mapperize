@@ -7,15 +7,13 @@ export function ArrayMapper<I, O>(type: (() => new(...args: any[]) => O) | strin
   return (target: any, propertyKey: string) => {
     Object.defineProperty(target.constructor.prototype, propertyKey, {
       get(): ArrayMapperFn<any, any> {
-        const transform: ArrayMapperFn<any, any> = function (inputs: any[]): any {
+        return (inputs: any[]): any => {
           if (isFunction(type)) {
             return inputs.map((input: any) => apply(type, input, params));
           } else {
             return inputs.map((input: any) => this[type](input));
           }
-        }
-
-        return transform;
+        };
       },
       enumerable: true,
       configurable: true

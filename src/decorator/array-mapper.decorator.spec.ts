@@ -6,9 +6,9 @@ describe('ArrayMapperDecorator', () => {
     class Mapping {
 
       @ArrayMapper('mapTo')
-      public arrayMapTo: ArrayMapperFn<any, any>
+      public arrayMapTo: ArrayMapperFn<any, any>;
 
-      public mapTo: any = () => void 0
+      public mapTo: any = () => void 0;
     }
 
     const mapper: Mapping = new Mapping();
@@ -36,7 +36,7 @@ describe('ArrayMapperDecorator', () => {
       @ArrayMapper(() => B, [
         {target: 'b', source: 'a'}
       ])
-      public arrayMapTo: ArrayMapperFn<A, B>
+      public arrayMapTo: ArrayMapperFn<A, B>;
     }
 
     const mapper: Mapping = new Mapping();
