@@ -1,6 +1,5 @@
 # TS-Mapperize
 
-
 ![ts-mapperize-ci](https://github.com/paddls/ts-mapperize/workflows/ts-mapperize-build/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/paddls/ts-mapperize/badge.svg?branch=master)](https://coveralls.io/github/paddls/ts-mapperize?branch=master)
 [![npm version](https://badge.fury.io/js/%40paddls%2Fts-mapperize.svg)](https://badge.fury.io/js/%40paddls%2Fts-mapperize)
@@ -10,6 +9,9 @@
 ![GitHub issues](https://img.shields.io/github/issues/paddls/ts-mapperize)
 ![GitHub top language](https://img.shields.io/github/languages/top/paddls/ts-mapperize)
 
+## Informations
+
+> :warning: Since version 1.0.2, ```ts-mapperize``` has been published under ```@paddls``` namespace. We continue to maintain ```@witty-services``` namespace.
 
 # Get Started
 
@@ -18,12 +20,14 @@
 ```
 npm install @paddls/ts-mapperize
 ```
+or
+```
+npm install @witty-services/ts-mapperize
+```
 
 ## Create simple mapper
 
 ```typescript
-import {Mapper, MapperFn} from '@paddls/ts-mapperize'
-
 class A {
   a: string;
 }
@@ -53,8 +57,6 @@ mapper.mapAToB(new A())
 ### Define all mapping behavior
 
 ```typescript
-import {ArrayMapper, ArrayMapperFn} from '@paddls/ts-mapperize'
-
 class A {
   a: string;
 }
@@ -82,8 +84,6 @@ mapper.mapAToB([new A()])
 ### Reuse behavior from function
 
 ```typescript
-import {Mapper, MapperFn, ArrayMapper, ArrayMapperFn} from '@paddls/ts-mapperize'
-
 class A {
   a: string;
 }
